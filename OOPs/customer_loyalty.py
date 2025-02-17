@@ -48,4 +48,22 @@ class TransactionHistory:
             print("\n")        
     
     
-                           
+vip = VIPcustomer("VIP001", "John")
+vip.earn_points(40000)
+vip.redeem_points(12500)
+
+transaction1 = Transaction("T001", vip, 5000)
+transaction2 = Transaction("T002", vip, 10000)
+
+transaction_history = TransactionHistory()
+transaction_history.add_transaction(transaction1)
+transaction_history.add_transaction(transaction2)
+
+transaction_history.show_transaction_history()
+
+balance = vip.show_points_balance()
+print(f"Customer ID: {vip.customer_id}")
+print(f"Customer Name: {vip.name}")
+print(f"Loyalty Point Balance: {balance}")
+
+
